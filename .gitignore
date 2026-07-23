@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# 敏感数据（Cookie 等信息）
+accounts.json
+commented/
+monitors.json
+
+# 浏览器 Profile（Windows 本地专用，体积大）
+browser_profile/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+docker-compose.yml
+Dockerfile
