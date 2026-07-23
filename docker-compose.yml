@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  bili-comment:
+    build: .
+    container_name: bili-comment
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./commented:/app/commented
+    environment:
+      - DATA_DIR=/app/data
+      - COMMENTED_DIR=/app/commented
+      - TZ=Asia/Shanghai
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
