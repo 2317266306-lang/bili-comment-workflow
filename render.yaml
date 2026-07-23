@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: bili-comment
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bili_server.py
+    envVars:
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+      - key: COMMENTED_DIR
+        value: /opt/render/project/src/data/commented
+      - key: RENDER
+        value: "true"
+    plan: free
